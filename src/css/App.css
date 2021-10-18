@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+#header {
+  display: flex;
+  padding: 2em;
+  margin: 2em;
+  border: solid black;
+
+  text-align: center;
+  background-color: rgb(24, 177, 177);
+}
+#nav {
+  display: flex;
+  padding: 1em;
+  margin: 0.5em;
+  border: solid rgb(3, 58, 58);
+  background-color: rgb(81, 133, 133);
+  text-align: center;
+}
+#intro {
+  text-align: center;
+}
