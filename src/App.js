@@ -17,10 +17,12 @@ function App() {
         <Route exact path="/">
           <Homepage />
         </Route>
-
-        <div className="App">
-          <header className="App-header">APP</header>
-        </div>
+        <Route exact path="/reviews">
+          <Reviews />
+        </Route>
+        <Route exact path="/categories">
+          <Categories />
+        </Route>
       </Switch>
     </BrowserRouter>
   )
