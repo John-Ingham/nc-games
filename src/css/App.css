@@ -25,3 +25,27 @@
   display: flex;
   object-fit: fill;
 }
+/* #reviewsList {
+  display: flex;
+  padding: 1em;
+  margin: 0.5em;
+  border: solid black 2px; */
+/* } */
+.reviewItems {
+  display: flex;
+  padding: 1em;
+  border: solid black 2px;
+  padding: 1.5em;
+}
+.reviewImages {
+  align-content: center;
+  margin: auto;
+}
+.categoriesSection {
+}
+
+#categoriesList {
+}
+
+.categoryItem {
+}

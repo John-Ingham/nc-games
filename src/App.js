@@ -23,6 +23,9 @@ function App() {
         <Route exact path="/categories">
           <Categories />
         </Route>
+        <Route exact path="/single_review">
+          <SingleReview />
+        </Route>
       </Switch>
     </BrowserRouter>
   )

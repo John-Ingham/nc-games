@@ -4,28 +4,38 @@ import { useEffect, useState } from 'react'
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     getReviews().then((reviewsFromApi) => {
       setReviews(reviewsFromApi)
+      setLoading(false)
     })
   }, [])
-  console.log(reviews, '<><><>reviews')
+  //console.log(reviews, '<><><>reviews')
   return (
     <div>
       <p>REVIEWS</p>
-      <ul>
+      <ul id="reviewsList">
         {reviews.map((review) => {
           return (
-            <li key={review.review_id}>
+            <li className="reviewItems" key={review.review_id}>
               <h4>
                 {review.review_id} ~ {review.title}
               </h4>
-              <img src={review.review_image_url} width="500" height="500"></img>
+              <img
+                className="reviewImages"
+                src={review.review_image_url}
+                alt={review.title}
+                width="300"
+                height="300"
+              ></img>
+              <button className="button">Go to this review</button>
             </li>
           )
         })}
       </ul>
+      {/* if(loading){<p> ..... Loading</p>} Need to fix this */}
     </div>
   )
 }

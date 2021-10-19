@@ -6,6 +6,11 @@ const gamesApi = axios.create({
 
 export const getReviews = async () => {
   const { data } = await gamesApi.get('/reviews')
-  console.log(data, '<><><>data')
   return data.reviews
+}
+
+export const getCategories = async () => {
+  const { data } = await gamesApi.get('/categories')
+  console.log(data, '<><><>data')
+  return data.categories
 }
