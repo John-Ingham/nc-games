@@ -23,6 +23,8 @@ const Reviews = () => {
               <h4>
                 {review.review_id} ~ {review.title}
               </h4>
+              <p className="reviewtext"> Category - - {review.category} </p>
+              <p className="reviewtext"> Votes - - {review.votes}</p>
               <img
                 className="reviewImages"
                 src={review.review_image_url}

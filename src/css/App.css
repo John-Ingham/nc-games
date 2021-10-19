@@ -1,6 +1,22 @@
 .App {
   text-align: center;
 }
+.button {
+  background-color: rgb(129, 129, 211);
+  color: white;
+  border: 1px solid rgb(54, 2, 54);
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: 150ms;
+  margin: 1em 0;
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgb(106, 106, 187);
+  transition: 150ms;
+}
+
 #header {
   display: flex;
   padding: 2em;
@@ -48,4 +64,24 @@
 }
 
 .categoryItem {
+  style: flex;
+  text-align: center;
+  background-color: rgb(179, 233, 202);
+  border: solid black 1px;
+}
+
+.reviewtext {
+  style: flex;
+  padding: 1em;
+  margin: 100px 25px 25px 25px;
+}
+#sortedreviews {
+  style: flex;
+  border: solid black 2px;
+}
+#sortedreviewslist {
+  style: flex;
+  text-align: center;
+  background-color: rgb(179, 233, 202);
+  border: solid black 1px;
 }

@@ -5,6 +5,7 @@ import Homepage from './components/Homepage'
 import Nav from './components/Nav'
 import Reviews from './components/Reviews'
 import SingleReview from './components/SingleReview'
+import ReviewsBySearchterm from './components/ReviewsBySearchterm'
 
 import './css/App.css'
 
@@ -25,6 +26,13 @@ function App() {
         </Route>
         <Route exact path="/single_review">
           <SingleReview />
+        </Route>
+        <Route exact path="/reviews/:categories">
+          <ReviewsBySearchterm />
+        </Route>
+
+        <Route>
+          <h2> 404 - Page not found</h2>
         </Route>
       </Switch>
     </BrowserRouter>

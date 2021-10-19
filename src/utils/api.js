@@ -11,6 +11,13 @@ export const getReviews = async () => {
 
 export const getCategories = async () => {
   const { data } = await gamesApi.get('/categories')
-  console.log(data, '<><><>data')
+  //console.log(data, '<><><>data')
   return data.categories
+}
+
+export const getReviewsBySearchterm = async (categories) => {
+  //console.log(categories)
+  const { data } = await gamesApi.get(`/reviews?category=${categories}`)
+  //console.log(data.reviews)
+  return data.reviews
 }
