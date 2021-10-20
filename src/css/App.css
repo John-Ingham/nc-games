@@ -29,7 +29,7 @@ button:hover {
 #nav {
   display: flex;
   padding: 1em;
-  margin: 0.5em;
+  margin: 35px 35px 35px 35px;
   border: solid rgb(3, 58, 58);
   background-color: rgb(81, 133, 133);
   text-align: center;
@@ -37,9 +37,32 @@ button:hover {
 #intro {
   text-align: center;
 }
-#boardgames {
+#loggedInReveal {
+  text-align: center;
+}
+#landing {
+  background-image: url('https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2448,w_3264,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/Press_Hol_pile_jiapzn.jpg');
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#login {
   display: flex;
-  object-fit: fill;
+  padding: 1em;
+  margin: 35px 35px 35px 35px;
+  border: solid rgb(3, 58, 58);
+  background-color: rgb(81, 133, 133);
+  text-align: center;
+}
+#username {
+  width: 250px;
+}
+#errorMsg {
+  color: rgb(128, 30, 30);
+  text-align: center;
 }
 /* #reviewsList {
   display: flex;

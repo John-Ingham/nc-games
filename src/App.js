@@ -6,17 +6,27 @@ import Nav from './components/Nav'
 import Reviews from './components/Reviews'
 import SingleReview from './components/SingleReview'
 import ReviewsBySearchterm from './components/ReviewsBySearchterm'
-
+import { useEffect, useState } from 'react'
 import './css/App.css'
 
 function App() {
+  const [currentUser, setCurrentUser] = useState('')
+
+  useEffect(() => {
+    const prevLoggedInUser = localStorage.getItem('loggedInUser')
+
+    if (prevLoggedInUser) {
+      setCurrentUser(prevLoggedInUser)
+    }
+  }, [])
+
   return (
     <BrowserRouter>
       <Header />
       <Nav />
       <Switch>
         <Route exact path="/">
-          <Homepage />
+          <Homepage currentUser={currentUser} setCurrentUser={setCurrentUser} />
         </Route>
         <Route exact path="/reviews">
           <Reviews />
