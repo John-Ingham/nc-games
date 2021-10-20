@@ -1,12 +1,14 @@
 import React from 'react'
 import { getReviews } from '../utils/api'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    setLoading(true)
     getReviews().then((reviewsFromApi) => {
       setReviews(reviewsFromApi)
       setLoading(false)
@@ -16,6 +18,7 @@ const Reviews = () => {
   return (
     <div>
       <p>REVIEWS</p>
+      <span>{loading ? 'LOADING' : null} </span>
       <ul id="reviewsList">
         {reviews.map((review) => {
           return (
@@ -32,12 +35,13 @@ const Reviews = () => {
                 width="300"
                 height="300"
               ></img>
-              <button className="button">Go to this review</button>
+              <Link to={`/reviews/${review.review_id}`}>
+                <button className="button">Go to this review</button>
+              </Link>
             </li>
           )
         })}
       </ul>
-      {/* if(loading){<p> ..... Loading</p>} Need to fix this */}
     </div>
   )
 }

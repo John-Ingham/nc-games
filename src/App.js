@@ -24,10 +24,10 @@ function App() {
         <Route exact path="/categories">
           <Categories />
         </Route>
-        <Route exact path="/single_review">
+        <Route exact path="/reviews/:review_id">
           <SingleReview />
         </Route>
-        <Route exact path="/reviews/:categories">
+        <Route exact path="/:categories/reviews">
           <ReviewsBySearchterm />
         </Route>
 

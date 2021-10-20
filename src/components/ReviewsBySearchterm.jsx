@@ -9,20 +9,23 @@ const ReviewsBySearchterm = () => {
 
   const { categories } = useParams()
   // console.log(categories)
+
   useEffect(() => {
+    setLoading(true)
     getReviewsBySearchterm(categories).then((reviewsFromApi) => {
       setReviews(reviewsFromApi)
       setLoading(false)
     })
-  }, [])
+  }, [categories])
 
   return (
     <div>
+      <span>{loading ? 'LOADING' : null} </span>
       <h4 id="sortedreviews">Reviews sorted by {categories}</h4>
       <ul id="sortedreviewslist">
         {reviews.map((review) => {
           return (
-            <li>
+            <li key={review.review_id}>
               <h4>
                 {review.review_id} ~ {review.title}
               </h4>
@@ -30,7 +33,12 @@ const ReviewsBySearchterm = () => {
               <p>Game Designer - {review.designer}</p>
               <p>Reviewer - {review.owner}</p>
               <p>Comments - {review.comment_count}</p>
-              <img src={review.review_image_url} height="350" width="350" />
+              <img
+                src={review.review_image_url}
+                alt={review.title}
+                height="350"
+                width="350"
+              />
             </li>
           )
         })}

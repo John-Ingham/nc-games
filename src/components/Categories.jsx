@@ -8,6 +8,7 @@ const Categories = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    setLoading(true)
     getCategories().then((categoriesFromApi) => {
       setCategories(categoriesFromApi)
       setLoading(false)
@@ -22,6 +23,7 @@ const Categories = () => {
         This is the current list of all the game categories/genres that we have
         reviewed on the group so far.{' '}
       </p>
+      <span>{loading ? 'LOADING' : null} </span>
       <ul id="categoriesList">
         {categories.map((category) => {
           return (
@@ -34,7 +36,7 @@ const Categories = () => {
               />
               <h3>{category.slug}</h3>
               <h4> {category.description}</h4>
-              <Link to={`/reviews/${category.slug}`}>
+              <Link to={`/${category.slug}/reviews`}>
                 <button className="button">
                   Go to {category.slug} reviews
                 </button>
