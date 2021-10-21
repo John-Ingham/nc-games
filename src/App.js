@@ -7,6 +7,7 @@ import Reviews from './components/Reviews'
 import SingleReview from './components/SingleReview'
 import ReviewsBySearchterm from './components/ReviewsBySearchterm'
 import { useEffect, useState } from 'react'
+import PostComment from './components/PostComment'
 import './css/App.css'
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
         </Route>
         <Route exact path="/:categories/reviews">
           <ReviewsBySearchterm />
+        </Route>
+        <Route exact path="/postcomment/">
+          <PostComment />
         </Route>
 
         <Route>

@@ -11,17 +11,34 @@ export const getReviews = async () => {
 
 export const getCategories = async () => {
   const { data } = await gamesApi.get('/categories')
-  //console.log(data, '<><><>data')
+
   return data.categories
 }
 
 export const getReviewsBySearchterm = async (categories) => {
   const { data } = await gamesApi.get(`/reviews?category=${categories}`)
-  // console.log(data.reviews, '>>>>> word')
+
   return data.reviews
 }
 export const getSingleReview = async (review_id) => {
   const { data } = await gamesApi.get(`/reviews/${review_id}`)
-  console.log(data.review)
+
   return data.review
+}
+export const getComments = async (review_id) => {
+  const { data } = await gamesApi.get(`/reviews/${review_id}/comments`)
+
+  return data.comments
+}
+export const patchVote = async (review_id) => {
+  const { data } = await gamesApi.patch(`/reviews/${review_id}`, {
+    inc_votes: 1,
+  })
+
+  return data
+}
+export const postComment = async (review_id) => {
+  const { data } = await gamesApi.patch(`/reviews/${review_id}`, {
+    // username: body,
+  })
 }

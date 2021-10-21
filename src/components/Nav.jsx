@@ -6,9 +6,18 @@ const Nav = () => {
     <div>
       <h4 id="nav">
         NAV BAR
-        <Link to="/"> Home </Link>
-        <Link to="/reviews"> Reviews</Link>
-        <Link to="/categories"> Categories</Link>
+        <Link to="/">
+          {' '}
+          <p className="links"> Home </p>{' '}
+        </Link>
+        <Link to="/reviews">
+          {' '}
+          <p className="links"> Reviews </p>{' '}
+        </Link>
+        <Link to="/categories">
+          {' '}
+          <p className="links"> Categories </p>{' '}
+        </Link>
       </h4>
     </div>
   )

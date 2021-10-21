@@ -37,7 +37,10 @@ const Homepage = ({ currentUser, setCurrentUser }) => {
             }
           }}
         >
-          <label htmlFor="username"> Username:</label>
+          <label id="usernameLabel" htmlFor="username">
+            {' '}
+            Username:
+          </label>
           <input
             type="text"
             id="username"
@@ -46,7 +49,10 @@ const Homepage = ({ currentUser, setCurrentUser }) => {
             }}
             value={user}
           />
-          <button type="submit"> Go!</button>
+          <button className="button" type="submit">
+            {' '}
+            Go!
+          </button>
         </form>
       </section>
     </div>

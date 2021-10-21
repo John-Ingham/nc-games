@@ -17,31 +17,39 @@ const Reviews = () => {
   //console.log(reviews, '<><><>reviews')
   return (
     <div>
-      <p>REVIEWS</p>
-      <span>{loading ? 'LOADING' : null} </span>
-      <ul id="reviewsList">
-        {reviews.map((review) => {
-          return (
-            <li className="reviewItems" key={review.review_id}>
-              <h4>
-                {review.review_id} ~ {review.title}
-              </h4>
-              <p className="reviewtext"> Category - - {review.category} </p>
-              <p className="reviewtext"> Votes - - {review.votes}</p>
-              <img
-                className="reviewImages"
-                src={review.review_image_url}
-                alt={review.title}
-                width="300"
-                height="300"
-              ></img>
-              <Link to={`/reviews/${review.review_id}`}>
-                <button className="button">Go to this review</button>
-              </Link>
-            </li>
-          )
-        })}
-      </ul>
+      {loading ? (
+        <img
+          src="https://i2.wp.com/codemyui.com/wp-content/uploads/2017/09/rotate-pulsating-loading-animation.gif?fit=880%2C440&ssl=1"
+          alt="loading"
+        />
+      ) : (
+        <section>
+          <p>REVIEWS</p>
+          <ul id="reviewsList">
+            {reviews.map((review) => {
+              return (
+                <li className="reviewItems" key={review.review_id}>
+                  <h4>
+                    {review.review_id} ~ {review.title}
+                  </h4>
+                  <p className="reviewtext"> Category - - {review.category} </p>
+                  <p className="reviewtext"> Votes - - {review.votes}</p>
+                  <img
+                    className="reviewImages"
+                    src={review.review_image_url}
+                    alt={review.title}
+                    width="300"
+                    height="300"
+                  ></img>
+                  <Link to={`/reviews/${review.review_id}`}>
+                    <button className="button">Go to this review</button>
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </section>
+      )}
     </div>
   )
 }
