@@ -11,9 +11,11 @@ const Homepage = ({ currentUser, setCurrentUser }) => {
         and review some of the games they've played
       </p>
       {currentUser ? (
-        <p id="loggedInReveal">Logged in as {currentUser}</p>
+        <p className="loggedInReveal">Logged in as {currentUser}</p>
       ) : null}
-      {errorMsg ? <p id="errorMsg">Please enter a valid username</p> : null}
+      {errorMsg ? (
+        <p className="errorMsg">Please enter a valid username</p>
+      ) : null}
       <section id="landing">
         <form
           id="login"

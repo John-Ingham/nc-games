@@ -41,8 +41,8 @@ function App() {
         <Route exact path="/:categories/reviews">
           <ReviewsBySearchterm />
         </Route>
-        <Route exact path="/postcomment/">
-          <PostComment />
+        <Route exact path="/:review_id/postcomment">
+          <PostComment currentUser={currentUser} />
         </Route>
 
         <Route>

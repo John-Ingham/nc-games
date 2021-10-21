@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { getComments, getSingleReview, patchVote } from '../utils/api'
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 const SingleReview = () => {
   const [review, setReview] = useState([])
@@ -93,6 +93,9 @@ const SingleReview = () => {
             })}
           </ul>
           {comments.length === 0 ? <p>No comments made as yet</p> : null}
+          <Link to={`/:${review_id}/postcomment`}>
+            <button className="button">Click here to post a review</button>
+          </Link>
         </section>
       )}
     </div>
