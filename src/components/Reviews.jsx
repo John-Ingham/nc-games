@@ -19,27 +19,28 @@ const Reviews = ({ dropdownResult }) => {
     <div>
       {loading ? (
         <img
+          className="loading"
           src="https://i2.wp.com/codemyui.com/wp-content/uploads/2017/09/rotate-pulsating-loading-animation.gif?fit=880%2C440&ssl=1"
           alt="loading"
         />
       ) : (
         <section>
-          <p>REVIEWS</p>
+          <p id="reviewsTitle">REVIEWS</p>
           <ul id="reviewsList">
             {reviews.map((review) => {
               return (
                 <li className="reviewItems" key={review.review_id}>
-                  <h4>
+                  <p className="reviewtext">
                     {review.review_id} ~ {review.title}
-                  </h4>
+                  </p>
                   <p className="reviewtext"> Category - - {review.category} </p>
                   <p className="reviewtext"> Votes - - {review.votes}</p>
                   <img
                     className="reviewImages"
                     src={review.review_image_url}
                     alt={review.title}
-                    width="300"
-                    height="300"
+                    width="200"
+                    height="200"
                   ></img>
                   <Link to={`/reviews/${review.review_id}`}>
                     <button className="button">Go to this review</button>

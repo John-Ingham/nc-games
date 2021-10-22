@@ -19,6 +19,7 @@ const Categories = () => {
     <div className="categoriesSection">
       {loading ? (
         <img
+          className="loading"
           src="https://i2.wp.com/codemyui.com/wp-content/uploads/2017/09/rotate-pulsating-loading-animation.gif?fit=880%2C440&ssl=1"
           alt="loading"
         />

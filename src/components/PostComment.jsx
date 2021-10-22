@@ -8,6 +8,7 @@ const PostComment = ({ currentUser }) => {
   const [loginErrorMsg, setLoginErrorMsg] = useState(false)
   const [disabled, setDisabled] = useState(false)
   const [text, setText] = useState('')
+  const [submitConfirmation, setSubmitConfirmation] = useState(false)
 
   const usersArray = [
     'jessjelly',
@@ -29,6 +30,7 @@ const PostComment = ({ currentUser }) => {
   const handleSubmit = (event) => {
     event.preventDefault()
     postComment(review_id, currentUser, text)
+    setSubmitConfirmation(true)
   }
 
   return (
@@ -44,24 +46,31 @@ const PostComment = ({ currentUser }) => {
             Only valid, signed-in, users may post a comment
           </p>
         ) : null}
-        <h3> Please submit your comments about Review {review_id}</h3>
+        <section id="commentsSection">
+          <h3> Please submit your comments about Review {review_id}</h3>
 
-        <form id="commenttypeform">
-          <label id="commentformlabel">Please enter your comments here</label>
-          <textarea
-            id="commentinput"
-            type="text"
-            disabled={disabled}
-            onClick={checkLogin}
-            onChange={(e) => {
-              setText(e.target.value)
-            }}
-          />
-          <button type="submit" className="button" onClick={handleSubmit}>
-            {' '}
-            Submit
-          </button>
-        </form>
+          <form id="commenttypeform">
+            <label id="commentformlabel">Please enter your comments here</label>
+            <textarea
+              id="commentinput"
+              type="text"
+              disabled={disabled}
+              onClick={checkLogin}
+              onChange={(e) => {
+                setText(e.target.value)
+              }}
+            />
+            <button type="submit" className="button" onClick={handleSubmit}>
+              {' '}
+              Submit
+            </button>
+            {submitConfirmation ? (
+              <p className="submitConfirmation">
+                Thanks for your comment {currentUser}
+              </p>
+            ) : null}
+          </form>
+        </section>
       </section>
     </div>
   )

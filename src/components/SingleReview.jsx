@@ -41,6 +41,7 @@ const SingleReview = () => {
     <div>
       {loading ? (
         <img
+          className="loading"
           src="https://i2.wp.com/codemyui.com/wp-content/uploads/2017/09/rotate-pulsating-loading-animation.gif?fit=880%2C440&ssl=1"
           alt="loading"
         />
@@ -73,6 +74,7 @@ const SingleReview = () => {
       )}
       {loading2 ? (
         <img
+          className="loading"
           src="https://i2.wp.com/codemyui.com/wp-content/uploads/2017/09/rotate-pulsating-loading-animation.gif?fit=880%2C440&ssl=1"
           alt="loading"
         />
@@ -94,7 +96,7 @@ const SingleReview = () => {
           </ul>
           {comments.length === 0 ? <p>No comments made as yet</p> : null}
           <Link to={`/:${review_id}/postcomment`}>
-            <button className="button">Click here to post a review</button>
+            <button className="button">Click here to post a comment</button>
           </Link>
         </section>
       )}

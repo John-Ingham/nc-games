@@ -5,7 +5,9 @@ const Header = () => {
   return (
     <div>
       <h1 id="header">
-        <Link to="/">NC GAMES LOOKUP</Link>
+        <Link to="/">
+          <p id="titleHeaderText">NC GAMES LOOKUP</p>
+        </Link>
       </h1>
     </div>
   )

@@ -20,29 +20,38 @@ const ReviewsBySearchterm = () => {
 
   return (
     <div>
-      <span>{loading ? 'LOADING' : null} </span>
-      <h4 id="sortedreviews">Reviews sorted by {categories}</h4>
-      <ul id="sortedreviewslist">
-        {reviews.map((review) => {
-          return (
-            <li key={review.review_id}>
-              <h4>
-                {review.review_id} ~ {review.title}
-              </h4>
-              <p>Review - {review.review_body}</p>
-              <p>Game Designer - {review.designer}</p>
-              <p>Reviewer - {review.owner}</p>
-              <p>Comments - {review.comment_count}</p>
-              <img
-                src={review.review_image_url}
-                alt={review.title}
-                height="350"
-                width="350"
-              />
-            </li>
-          )
-        })}
-      </ul>
+      {loading ? (
+        <img
+          className="loading"
+          src="https://i2.wp.com/codemyui.com/wp-content/uploads/2017/09/rotate-pulsating-loading-animation.gif?fit=880%2C440&ssl=1"
+          alt="loading"
+        />
+      ) : (
+        <section>
+          <h4 id="sortedreviews">Reviews sorted by {categories}</h4>
+          <ul id="sortedreviewslist">
+            {reviews.map((review) => {
+              return (
+                <li className="sortedReviews" key={review.review_id}>
+                  <h4>
+                    {review.review_id} ~ {review.title}
+                  </h4>
+                  <p>Review - {review.review_body}</p>
+                  <p>Game Designer - {review.designer}</p>
+                  <p>Reviewer - {review.owner}</p>
+                  <p>Comments - {review.comment_count}</p>
+                  <img
+                    src={review.review_image_url}
+                    alt={review.title}
+                    height="350"
+                    width="350"
+                  />
+                </li>
+              )
+            })}
+          </ul>
+        </section>
+      )}
     </div>
   )
 }
