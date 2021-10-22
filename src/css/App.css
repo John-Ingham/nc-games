@@ -143,3 +143,9 @@ button:hover {
   color: rgb(134, 43, 43);
   text-align: center;
 }
+#reviewFilter {
+  display: flex;
+  color: rgb(192, 192, 235);
+  background-color: rgb(53, 47, 47);
+  margin: 2rem 1rem 2rem 1rem;
+}

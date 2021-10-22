@@ -8,10 +8,12 @@ import SingleReview from './components/SingleReview'
 import ReviewsBySearchterm from './components/ReviewsBySearchterm'
 import { useEffect, useState } from 'react'
 import PostComment from './components/PostComment'
+import DropdownFilter from './components/DropdownFilter'
 import './css/App.css'
 
 function App() {
   const [currentUser, setCurrentUser] = useState('')
+  const [dropdownResult, setDropdownResult] = useState('')
 
   useEffect(() => {
     const prevLoggedInUser = localStorage.getItem('loggedInUser')
@@ -30,7 +32,8 @@ function App() {
           <Homepage currentUser={currentUser} setCurrentUser={setCurrentUser} />
         </Route>
         <Route exact path="/reviews">
-          <Reviews />
+          <DropdownFilter setDropdownResult={setDropdownResult} />
+          <Reviews dropdownResult={dropdownResult} />
         </Route>
         <Route exact path="/categories">
           <Categories />

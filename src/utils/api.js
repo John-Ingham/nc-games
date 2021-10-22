@@ -4,9 +4,14 @@ const gamesApi = axios.create({
   baseURL: 'https://nc-games-lookup.herokuapp.com/api/',
 })
 
-export const getReviews = async () => {
-  const { data } = await gamesApi.get('/reviews')
-  return data.reviews
+export const getReviews = async (dropdownResult) => {
+  if (!dropdownResult || dropdownResult === 'nothing') {
+    const { data } = await gamesApi.get('/reviews')
+    return data.reviews
+  } else {
+    const { data } = await gamesApi.get(`/reviews?sort_by=${dropdownResult}`)
+    return data.reviews
+  }
 }
 
 export const getCategories = async () => {
