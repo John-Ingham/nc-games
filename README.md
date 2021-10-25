@@ -1,6 +1,4 @@
-Need to write readme for the project.
-
-Welcome to my Front-end api react project.
+Welcome to my Front-end api react project, entitled NC Games.
 
 This is an user interface for web based interaction to look up board game reviews and see comments made by users upon the reviews.
 
@@ -8,9 +6,11 @@ With this you can view reviews in full, then specifically view the detailed cont
 
 To run this you need only use the website, hosted upon netlify to try the user interface capapbilities.
 
-At URL//
+At URL https://trusting-wilson-451f5b.netlify.app/
 
-In code terms the application is built using React.js and with the following added installs; axios, react, react-router-dom.
+In code terms the application is built using React.js and with the following added installs; axios, react, react-router-dom. These are the modern, up-to-date programming tools that are used in commercial workplaces and show my knowledge and capability to work with them.
+
+It has an associated back-end api, that you can also find and view on my Github.
 
 Inside each folder there is the details of the design.
 Planning, with wireframe models and a tree diagram.

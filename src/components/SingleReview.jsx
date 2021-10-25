@@ -84,7 +84,7 @@ const SingleReview = () => {
           <ul id="commentslist">
             {comments.map((comment) => {
               return (
-                <li key={comment.comment_id}>
+                <li className="commentsListItem" key={comment.comment_id}>
                   <h4>
                     Comment {comment.comment_id} ~ Author {comment.author}
                   </h4>
