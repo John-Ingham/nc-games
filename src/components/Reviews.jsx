@@ -29,23 +29,28 @@ const Reviews = ({ dropdownResult }) => {
           <ul id="reviewsList">
             {reviews.map((review) => {
               return (
-                <li className="reviewItems" key={review.review_id}>
-                  <p className="reviewtext">
-                    {review.review_id} ~ {review.title}
-                  </p>
-                  <p className="reviewtext"> Category - - {review.category} </p>
-                  <p className="reviewtext"> Votes - - {review.votes}</p>
-                  <img
-                    className="reviewImages"
-                    src={review.review_image_url}
-                    alt={review.title}
-                    width="200"
-                    height="200"
-                  ></img>
-                  <Link to={`/reviews/${review.review_id}`}>
-                    <button className="button">Go to this review</button>
-                  </Link>
-                </li>
+                <div>
+                  <li className="reviewItems" key={review.review_id}>
+                    <p className="reviewtext">
+                      {review.review_id} ~ {review.title}
+                    </p>
+                    <p className="reviewtext">
+                      {' '}
+                      Category - - {review.category}{' '}
+                    </p>
+                    <p className="reviewtext"> Votes - - {review.votes}</p>
+                    <img
+                      className="reviewImages"
+                      src={review.review_image_url}
+                      alt={review.title}
+                      width="200"
+                      height="200"
+                    ></img>
+                    <Link to={`/reviews/${review.review_id}`}>
+                      <button className="button">Go to this review</button>
+                    </Link>
+                  </li>
+                </div>
               )
             })}
           </ul>

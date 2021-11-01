@@ -4,7 +4,7 @@ import { useState } from 'react'
 const DropdownFilter = ({ setDropdownResult }) => {
   const [disabled, setDisabled] = useState(false)
   let options = [
-    { label: 'no filtering', value: 'nothing' },
+    { label: 'No filtering', value: 'nothing' },
     { label: 'By date', value: 'created_at' },
     { label: 'Most votes', value: 'votes' },
     { label: 'Most commented on', value: 'comment_count' },

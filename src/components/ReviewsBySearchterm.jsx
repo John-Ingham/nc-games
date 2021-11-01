@@ -36,6 +36,9 @@ const ReviewsBySearchterm = () => {
                   <h4>
                     {review.review_id} ~ {review.title}
                   </h4>
+                  <Link to={`/reviews/${review.review_id}`}>
+                    <button className="button">Go to this review</button>
+                  </Link>
                   <p>Review - {review.review_body}</p>
                   <p>Game Designer - {review.designer}</p>
                   <p>Reviewer - {review.owner}</p>

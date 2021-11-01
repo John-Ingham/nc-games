@@ -7,7 +7,7 @@ const SingleReview = () => {
   const [review, setReview] = useState([])
   const [loading, setLoading] = useState(true)
   const [comments, setComments] = useState([])
-  const [loading2, setLoading2] = useState(true)
+  const [loading2, setLoadingComments] = useState(true)
   const [votes, setVotes] = useState(0)
   const { review_id } = useParams()
   const [disabled, setDisabled] = useState(false)
@@ -30,10 +30,10 @@ const SingleReview = () => {
   }, [review_id])
 
   useEffect(() => {
-    setLoading2(true)
+    setLoadingComments(true)
     getComments(review_id).then((commentsFromApi) => {
       setComments(commentsFromApi)
-      setLoading2(false)
+      setLoadingComments(false)
     })
   }, [review_id])
 
@@ -72,7 +72,7 @@ const SingleReview = () => {
           </button>
         </section>
       )}
-      {loading2 ? (
+      {loadingComments ? (
         <img
           className="loading"
           src="https://i2.wp.com/codemyui.com/wp-content/uploads/2017/09/rotate-pulsating-loading-animation.gif?fit=880%2C440&ssl=1"
