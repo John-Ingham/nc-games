@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { getReviewsBySearchterm } from '../utils/api'
 import { useState } from 'react'
 

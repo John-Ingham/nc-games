@@ -7,7 +7,7 @@ const SingleReview = () => {
   const [review, setReview] = useState([])
   const [loading, setLoading] = useState(true)
   const [comments, setComments] = useState([])
-  const [loading2, setLoadingComments] = useState(true)
+  const [loadingComments, setLoadingComments] = useState(true)
   const [votes, setVotes] = useState(0)
   const { review_id } = useParams()
   const [disabled, setDisabled] = useState(false)

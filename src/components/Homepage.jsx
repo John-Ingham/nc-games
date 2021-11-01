@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 const Homepage = ({ currentUser, setCurrentUser }) => {
   const [errorMsg, setErrorMsg] = useState(false)
-  const [user, setUser] = useState('Please login. Guest - try jessjelly')
+  const [user, setUser] = useState('')
   return (
     <div>
       <p id="intro">
@@ -44,6 +44,7 @@ const Homepage = ({ currentUser, setCurrentUser }) => {
             Username:
           </label>
           <input
+            placeholder="Please login - Guest? Try weegembump"
             type="text"
             id="username"
             onChange={(e) => {
