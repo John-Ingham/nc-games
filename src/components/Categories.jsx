@@ -27,9 +27,8 @@ const Categories = () => {
         <section>
           <h2 id="categories">Categories List</h2>
           <p>
-            {' '}
             This is the current list of all the game categories/genres that we
-            have reviewed on the group so far.{' '}
+            have reviewed on the group so far.
           </p>
           <ul id="categoriesList">
             {categories.map((category) => {

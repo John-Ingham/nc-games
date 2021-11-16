@@ -130,7 +130,7 @@ button:hover {
 
 .reviewtext {
   font-weight: 700;
-  font-family: fantasy;
+
   font-style: oblique;
   display: flex;
   flex-wrap: wrap;
@@ -160,10 +160,8 @@ button:hover {
 }
 #commentsOnReview {
   text-align: center;
-
   border: solid black 1px;
   margin: 1.5em 8em;
-
   background-color: #cce7f1;
   box-shadow: -8px 8px rgb(3, 117, 117);
 }
@@ -189,12 +187,8 @@ button:hover {
   border: solid 1px black;
   display: inline-flex;
   flex-wrap: wrap;
-
   justify-content: space-between;
-  /* padding: auto; */
   color: rgb(62, 15, 124);
-  /* margin-left: auto;
-  margin-right: auto; */
   height: 250px;
   width: 650px;
 }
@@ -205,8 +199,6 @@ button:hover {
   margin: 25px 25px 5px 5px;
 }
 #commentinput {
-  /* margin: 25px 25px 25px 25px;
-  padding: 3rem; */
   color: rgb(41, 38, 38);
   height: 15rem;
   width: 40rem;
@@ -236,7 +228,7 @@ button:hover {
   color: rgb(192, 192, 235);
   background-color: rgb(53, 47, 47);
 }
-/* Review page */
+
 #reviewsTitle {
   margin-left: 4rem;
   font-weight: 700;

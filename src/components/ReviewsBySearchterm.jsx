@@ -8,7 +8,6 @@ const ReviewsBySearchterm = () => {
   const [loading, setLoading] = useState(true)
 
   const { categories } = useParams()
-  // console.log(categories)
 
   useEffect(() => {
     setLoading(true)

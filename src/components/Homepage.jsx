@@ -40,7 +40,6 @@ const Homepage = ({ currentUser, setCurrentUser }) => {
           }}
         >
           <label id="usernameLabel" htmlFor="username">
-            {' '}
             Username:
           </label>
           <input
@@ -53,7 +52,6 @@ const Homepage = ({ currentUser, setCurrentUser }) => {
             value={user}
           />
           <button className="button" type="submit">
-            {' '}
             Go!
           </button>
         </form>

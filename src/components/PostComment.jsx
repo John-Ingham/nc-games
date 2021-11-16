@@ -61,7 +61,6 @@ const PostComment = ({ currentUser }) => {
               }}
             />
             <button type="submit" className="button" onClick={handleSubmit}>
-              {' '}
               Submit
             </button>
             {submitConfirmation ? (

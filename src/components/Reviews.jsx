@@ -14,7 +14,7 @@ const Reviews = ({ dropdownResult }) => {
       setLoading(false)
     })
   }, [dropdownResult])
-  //console.log(reviews, '<><><>reviews')
+
   return (
     <div>
       {loading ? (
@@ -34,10 +34,7 @@ const Reviews = ({ dropdownResult }) => {
                     <p className="reviewtext">
                       {review.review_id} ~ {review.title}
                     </p>
-                    <p className="reviewtext">
-                      {' '}
-                      Category - - {review.category}{' '}
-                    </p>
+                    <p className="reviewtext">Category - - {review.category}</p>
                     <p className="reviewtext"> Votes - - {review.votes}</p>
                     <img
                       className="reviewImages"

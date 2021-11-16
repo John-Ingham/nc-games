@@ -6,9 +6,9 @@ With this you can view reviews in full, then specifically view the detailed cont
 
 To run this you need only use the website, hosted upon netlify to try the user interface capapbilities.
 
-At [URL](https://trusting-wilson-451f5b.netlify.app/)
+At [NC Games](https://trusting-wilson-451f5b.netlify.app/)
 
-The matching back-end api to make this run is hosted here [URL](https://github.com/John-Ingham/NC-Games-Back-end)
+The matching back-end api to make this run is hosted here [Github back-end](https://github.com/John-Ingham/Back-end-API-project)
 
 In code terms the application is built using React.js and with the following added installs; axios, react, react-router-dom. These are the modern, up-to-date programming tools that are used in commercial workplaces and show my knowledge and capability to work with them.
 

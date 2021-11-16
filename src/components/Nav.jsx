@@ -7,7 +7,6 @@ const Nav = () => {
       <h4 id="nav">
         NAV BAR
         <Link to="/">
-          {' '}
           <p className="links"> Home </p>{' '}
         </Link>
         <Link to="/reviews">
@@ -15,7 +14,6 @@ const Nav = () => {
           <p className="links"> Reviews </p>{' '}
         </Link>
         <Link to="/categories">
-          {' '}
           <p className="links"> Categories </p>{' '}
         </Link>
       </h4>

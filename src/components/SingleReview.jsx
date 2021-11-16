@@ -57,8 +57,7 @@ const SingleReview = () => {
           />
           <p> Review ~ {review.review_body}</p>
           <p>
-            Game Category ~ {review.category} ~ Game Designer ~{' '}
-            {review.designer}{' '}
+            Game Category ~ {review.category} ~ Game Designer ~{review.designer}
           </p>
           <p> Review Author/Owner ~ {review.owner}</p>
           <p></p>
